@@ -94,7 +94,7 @@ int main(void) {
 	uint values[2];
 	char buf[64];
 	
-	// give user values
+	// get user values
 	size_t i = 0;
 	while (i < len(values) && fgets(buf, sizeof(buf), stdin) != NULL) {
 		int value;
@@ -117,14 +117,14 @@ int main(void) {
 	Tuple in = {values[0], values[1]};
 
 	// gcd calculate and print
-    printf("The gcd is: %d\n", gcdIterative(in));
+        printf("The gcd is: %d\n", gcdIterative(in));
 
 	// calculate linear combo
 	Quartet lc = gcdLinearCombo(in);
 
 	// linear combination vectors
 	printf("First solution vector: %d %d\n", lc.a, lc.b);
-    printf("Sign-flipped solution: %d %d\n", lc.c, lc.d);
+        printf("Sign-flipped solution: %d %d\n", lc.c, lc.d);
 
 	return 0;
 }
